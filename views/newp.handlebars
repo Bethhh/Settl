@@ -1,0 +1,448 @@
+<!doctype html>
+
+<html>
+<head>
+	<!-- Google Analytics Content Experiment code 
+<script>function utmx_section(){}function utmx(){}(function(){var
+k='83049688-1',d=document,l=d.location,c=d.cookie;
+if(l.search.indexOf('utm_expid='+k)>0)return;
+function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+</script><script>utmx('url','A/B');</script>
+ End of Google Analytics Content Experiment code -->
+	<title>Create New Profile</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootswatch.min.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/icon/favicon.ico">
+</head>
+
+<body>
+
+	<div class="top_bar">
+		<div class="menu_bar">
+			<div class="btn-group">
+		  		<button type="button" id="home_dropdown" class="btn btn-default btn-lg" data-toggle="dropdown">
+  				<span class="glyphicon glyphicon-home"></span>
+				</button>
+		  		<ul class="dropdown-menu" role="menu">
+		    		<li><a href="/menu">Home Menu</a></li>
+		    		<li><a href="/about">About</a></li>
+		    		<li><a class="logoutgroup" href="">Logout</a></li>
+		  		</ul>
+			</div>
+		</div>
+		<h4 class="subtitle" id="createprof">Create Housing Profile</h4>
+		
+
+	</div>
+	
+<div class="container" id="newprof_bg">
+	
+	<ul class="nav nav-tabs ">
+  		<li class="active"><a href="/newp">New</a></li>
+  		<li><a href="/existing">Existing</a></li>
+  		<li><a href="#" class="logoutgroup name_sp">Log Out</a></li>
+	</ul>
+	<!--<table class="user_table">
+		<tr>
+		  <td class="user_name">Hello, User</td>
+		  <td>Your Account</td>
+		  <td class="logoutgroup logout_sp"><button class="btn btn-default">Log Out</button></td>
+		</tr>
+	</table>-->
+	<table class="user_table">
+		<tr>
+		  <td class="user_name">Hello, User</td>
+		  <td id="prof_label" class="name_sp">New Profile</td>
+		</tr>
+	</table>
+
+	<div id="main_buttons">
+		<p class="main_help_txt help-block">Click on a <span class="red">red</span> block and fill out the form to turn the block <span class="green">green</span>!</p>
+		<div class="block" id="b1">
+			<button id="type_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Type</button>
+			<button id="date_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Date</button>
+		</div>
+		<div class="block" id="b1">
+			<button id="rent_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Rent</button>
+			<button id="property_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Property</button>
+		</div>
+		<div class="block" id="b1">
+			<button id="address_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Address</button>
+			<button id="other_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Other</button>
+		</div>
+
+		<div id="data">
+			<p class="main_help_txt help-block">Submit only after all blocks are <span class="green">green</span>!</p>
+			  <button type="button" class="btn btn-primary disabled" id="save" >Save</button>
+			  <button type="button" class="btn btn-primary" id="ss" >Submit</button>
+		</div>
+	</div>
+	<div id="first_div">
+		<form class="well" id="first_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">New Profile</legend>
+			<div class="form-group control-group" id="pname-group">
+			    <label class="control-label form-label" for="pname">Profile Name: </label></br>
+			    <div class="controls">
+			    	<p class="help-block">Give your profile a short name!</br>Profile name cannot be changed later!</p>
+			        <input type="text" placeholder="Profile Name..." class="input-xlarge" id="pname">		        
+			    </div>
+			</div>
+			<div class="form-group control-group">
+			    <label class="control-label form-label" for="Profile Type">Profile Type: </label></br>
+			    <div class="controls">
+			        <input type="radio" class="input-xlarge" value="Rent In" name="Profile Type" checked><strong>Rent In</strong>
+			        <span class="help-inline">I want to be a tenant!</span></br>
+			        <input type="radio" class="input-xlarge" value="Rent Out" name="Profile Type"><strong>Rent Out</strong>
+			        <span class="help-inline">I want to be a landlord!</span>
+			    </div>
+			</div>
+			<div class="first_buttons">
+		    	<input type="button" id="first_back" value="Back" class=" btn btn-primary sub-form form-control">
+				<input type="submit" id="first_submit" value="Next" class=" btn btn-primary sub-form form-control">
+			</div>
+		</fieldset>
+		</form>
+	</div>
+	<div id="type_div">
+		<form class="well" id="type_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Type</legend>
+			{{#each Types}}
+		   		<div class="form-group control-group">
+		   		<table class="form-table"><tr><td class="cell label-cell">		
+		   			{{#if radio}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>	
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>	
+						{{else}}
+							<label class="form-label">{{label}}: </label>
+							</td><td class="cell">
+							<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
+						{{/if}}
+		   			{{/if}}
+		   			</td></tr></table>
+		    	</div>
+		    {{/each}}
+		    <div class="type_buttons">
+	    	<input class="btn btn-primary sub-form submit" type="submit" id="type_back" value="Back">
+			<input class="btn btn-primary form-control sub-form disabled submit" type="submit" id="type_save" value="Save">
+			<input class="btn btn-primary sub-form submit" type="submit" id="type_submit" value="Submit">
+			</div>
+		</fieldset>
+		</form>
+	</div>
+    <div id="rent_div">
+		<form class="well" id="rent_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Rent</legend>
+			{{#each Rent}}
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"></tr><td class="cell label-cell">	
+		   			{{#if radio}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label class="form-label">{{label}}: </label>	
+		   					</td><td class="cell">
+		   					<div class="controls">
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
+						{{else}}
+							<label class="form-label">{{label}}: </label>
+							</td><td class="cell">
+		   					<div class="controls">		
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+							</div>
+						{{/if}}
+		   			{{/if}}
+		   			</td></tr></table>
+		    	</div>
+		    {{/each}}
+		    <div class="rent_buttons">
+		    <input class="btn btn-primary sub-form submit" type="submit" id="rent_back" value="Back">
+			<input class="btn btn-primary form-control sub-form disabled submit"type="submit" id="rent_save" value="Save">
+			<input class="btn btn-primary sub-form submit"type="submit" id="rent_submit" value="Submit">
+			</div>
+		</fieldset>
+		</form>
+    </div>
+
+    <div id="address_div">
+		<form class="well" id="address_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Address</legend>
+			{{#each Address}}
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">
+		   			{{#if radio}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
+						{{else}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">		
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
+						{{/if}}
+		   			{{/if}}
+		   			</td></tr></table>
+		    	</div>
+		    {{/each}}
+		    <div class="address_buttons">
+		    <input class="btn btn-primary sub-form submit" type="submit" id="address_back" value="Back">
+			<input class="btn btn-primary sub-form disabled submit" type="submit" id="address_save" value="Save">
+			<input class="btn btn-primary sub-form submit" type="submit" id="address_submit" value="Submit">
+			</div>
+		</fieldset>
+		</form>
+    </div>
+
+    <div id="date_div">
+		<form class="well" id="date_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Date</legend>
+			{{#each Dates}}
+		   		<div class="form-group control-group">		
+		   		<table class="form-table"><tr><td class="cell label-cell">
+		   			{{#if radio}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
+						{{else}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
+						{{/if}}
+		   			{{/if}}
+		   			</td></tr></table>
+		    	</div>
+		    {{/each}}
+		    <div class="date_buttons">
+		    <input class="btn btn-primary sub-form submit" type="submit" id="date_back" value="Back">
+			<input class="btn btn-primary sub-form disabled submit"type="submit" id="date_save" value="Save">
+			<input class="btn btn-primary sub-form submit"type="submit" id="date_submit" value="Submit">
+			</div>
+		</fieldset>
+		</form>
+    </div>
+
+    <div id="property_div">
+		<form class="well" id="property_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Property</legend>
+			{{#each Property}}
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">	
+		   			{{#if radio}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
+						{{else}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
+						{{/if}}
+		   			{{/if}}
+		   			</td></tr></table>
+		    	</div>
+		    {{/each}}
+		    <div class="property_buttons">
+		    <input class="btn btn-primary sub-form submit" type="submit" id="property_back" value="Back">
+			<input class="btn btn-primary sub-form disabled submit" type="submit" id="property_save" value="Save">
+			<input class="btn btn-primary sub-form submit" type="submit" id="property_submit" value="Submit">
+			</div>
+		</form>
+
+    </div>
+
+    <div id="other_div">
+		<form class="well" id="other_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Other</legend>
+			{{#each Other}}
+		   		<div class="from-group control-group">
+		   		<table class="form-table"><tr><td class="cell label-cell">		
+		   			{{#if radio}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+			   				{{#each options}}
+			   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+			   				{{/each}}
+			   				<p class="help-block">{{help}}</p>
+			   				<div class="clear"></div>
+		   				</div>
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">
+			   					<select name="{{label}}">		
+			   						{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
+						{{else}}
+							<label class="form-label">{{label}}: </label>
+							</td><td class="cell">
+							<div class="controls">
+			   					{{#each options}}
+			   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+			   					{{/each}}
+			   					<p class="help-block">{{help}}</p>
+			   				</div>
+						{{/if}}
+		   			{{/if}}
+		   			</td></tr></table>
+		    	</div>
+			{{/each}}
+			<div class="other_buttons">
+	    	<input class="btn btn-primary sub-form submit" type="submit" id="other_back" value="Back" >
+			<input class="btn btn-primary form-control sub-form disabled submit" type="submit" id="other_save" value="Save">
+			<input class="btn btn-primary sub-form submit" type="submit" id="other_submit" value="Submit">
+			</div>
+		</fieldset>
+		</form>
+
+    </div>
+
+
+</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/handlebars.js"></script>
+	<script src="js/ucsdrentals.js"></script>
+	<script src="js/newProfile2.js"></script>
+	<script src="js/submit_form.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48706855-1', 'ucsdrentals.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

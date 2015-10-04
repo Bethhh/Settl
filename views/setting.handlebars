@@ -1,0 +1,72 @@
+<html>
+<head>
+	<title>UCSDRentals</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/bootswatch.min.css">
+	<link href="/css/index.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/icon/favicon.ico">
+
+</head>
+
+<body>
+		<div class="top_bar">
+		<div class="menu_bar">
+			<div class="btn-group">
+		  		<button type="button" id="home_dropdown" class="btn btn-default btn-lg" data-toggle="dropdown">
+  				<span class="glyphicon glyphicon-home"></span>
+				</button>
+		  		<ul class="dropdown-menu" role="menu">
+		    		<li><a href="/menu">Home Menu</a></li>
+		    		<li><a href="/about">About</a></li>
+		    		<li><a class="logoutgroup" href="/">Logout</a></li>
+		  		</ul>
+			</div>
+		</div>
+		<h1 id="sign_up_title">Setting</h1>
+		
+
+	</div>
+
+<div class="container" >
+
+	<div id="setting">
+		<form class="well" id="setting_form" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Account Settings</legend>
+			{{#each User}}
+		   		<div class="form-group control-group">			  
+		   		<table class="form-table"><tr><td class="cell label-cell">
+		   			<label id="settinglabel">{{label}}: </label>
+		   			{{#if ispwd}}
+                      <input class="textbox" type="password" name="{{label_id}}" value="{{value}}"></br>
+		   			{{else}}
+		   			  <input class="textbox" type="text" name="{{label_id}}" value="{{value}}"></br>
+		   			{{/if}}
+		   		</div>
+		   	</td></tr></table>
+		   </div>
+		    {{/each}}
+	    	<button type="submit" id="setting_save" class="form-control btn btn-primary">Save</button>
+
+		</form>
+	</div>
+</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/ucsdrentals.js"></script>
+	<script src="js/setting.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48706855-1', 'ucsdrentals.herokuapp.com');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>

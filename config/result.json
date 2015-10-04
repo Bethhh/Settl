@@ -1,0 +1,242 @@
+{
+	"Types": [
+		{
+			"label": "Listing Type",
+			"type":"radio",
+			"value": "",
+			"selected": 0,
+			"group":"Types"
+		},
+		{
+			"label":"Housing Type",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Types"		
+		}
+	],
+
+	"Property": [
+		{
+			"label":"Parking",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Storage",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Kitchen",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Bathroom",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Bedroom",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Laundry Facility",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Furnished",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Pool",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Sports Facility",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Internet",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+		    "group":"Property"
+		},
+		{
+			"label":"Balcony",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Air Conditioning",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		},
+		{
+			"label":"Cable",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Property"		
+		}
+	],
+
+	"Rent": [
+		{
+			"label":"Rent Range",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Rent"		
+		},
+		{
+			"label":"Water",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Rent"			
+		},
+		{
+			"label":"Electricity",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Rent"			
+		},
+		{
+			"label":"Internet/Wifi",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Rent"			
+		},
+		{
+			"label":"Pay Method",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Rent"			
+		},
+		{
+			"label":"Deposit",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Rent"			
+		}
+	],
+
+	"Address":[
+		{
+			"label":"Area",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Address"			
+		},
+		{
+			"label":"Transportation",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Address"		
+		},
+		{
+			"label":"Market/Mall",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Address"		
+		}
+	],
+	"Other": [
+		{
+			"label":"Pets",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Other"		
+		},
+		{
+			"label":"Major",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Other"		
+		},
+		{
+			"label":"Age range",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Other"		
+		},
+		{
+			"label":"Sex",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Other"		
+		},
+		{
+			"label":"Smoking",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Other"		
+		},
+		{
+			"label":"Contact",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Other"		
+		}
+	],
+
+	"Dates": [
+		{
+			"label":"Length",
+			"type":"dropdown",
+			"value":"",
+			"selected": 0,
+			"group":"Dates"		
+		},
+		{
+			"label":"Lease",
+			"type":"radio",
+			"value":"",
+			"selected": 0,
+			"group":"Dates"			
+		}
+	]
+}

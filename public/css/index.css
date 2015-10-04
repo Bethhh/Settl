@@ -1,0 +1,563 @@
+body {
+}
+
+/***** LOGIN PAGE *****/
+#home_bg {
+	background-position: center bottom;
+	background-image:url("/icons/house.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#h1container{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	top:3%;
+	left:5%;
+	right:5%;
+	height: 10%;
+	width: 90%;
+	z-index:-1;
+}
+
+#h2container{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	top:3.5%;
+	left:5%;
+	right:5%;
+	height: 10%;
+	width: 90%;
+	z-index:-1;
+}
+
+#emailcontainer{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	margin-top:100px;
+	left:15%;
+	right:15%;
+	height: 5%;
+	width: 70%;
+	z-index:-1;
+}
+
+#pwcontainer{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	margin-top: 0px;
+	left:15%;
+	right:15%;
+	height: 5%;
+	width: 70%;
+	z-index:-1;
+}
+#emaillcontainer{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	margin-top:85px;
+	left:15%;
+	right:15%;
+	height: 5%;
+	width: 70%;
+	z-index:-1;
+}
+#sign{
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+}
+h1 {
+	color: white;
+	text-align: center;
+	background-opacity: 0;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+#appname{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	font-size: 35pt;
+	font-weight: bold;
+	z-index:1;
+}
+.email_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-top: 100px; 
+}
+
+.password_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+button#login_btn {
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:25pt;
+	margin-top:5px;
+	margin-bottom:0px;
+}
+#signup{
+	text-align: center;
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:25pt;
+	margin-top:5px;
+	margin-bottom:0px;
+}
+
+button#signup_btn{
+	text-align:center;
+	width:100%;
+	font-weight:bold;
+	height:25pt;
+	margin-top:10px;
+	margin-bottom:30px;
+}
+/************************/
+
+
+
+/********* MENU PAGE *********/
+#newprof_bg {
+/*	background-color: #303030; */
+}
+h2 {
+	color:white;
+/*	background-position: left top;
+	background-image:url("/icons/apartment.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-opacity: ;
+*/	
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.welcome_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-weight:bold;
+	font-size:16pt;
+}
+#menu_title {
+	font-family: Oswald, sans-serif;
+	text-align: center;
+}
+#createNew {
+	display: block;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#viewExisting {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#new_update {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+#logout {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 23px;
+}
+button#settings, button#about {
+	margin-bottom:0px;
+	height:30pt;
+	width:50%;
+	float:left;
+}
+/*******************************/
+
+
+/***** CREATE HOUSING PROFILE PAGE *****/
+h1, h4 {
+	color:white;
+	display: block;
+	/*background-position: center top;
+	background-image:url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/t1/1782039_10202451000130515_675626893_n.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 330px;*/
+	margin-top:0px;
+/*	margin-left:65px; */
+	margin-left: 0px;
+	margin-right:0px;
+	margin-bottom:0px; 
+	padding-top:30px;
+	padding-left: 10px;
+	padding-bottom:30px;
+	padding-right: 30px;
+}
+#createprof {
+	font-size: 16pt;
+	text-align: right;
+	padding-right: 20px;
+}
+#home_dropdown {
+	display: block;
+	margin-top: 10px;
+	margin-left: 0px;
+} 
+#type_btn, #rent_btn, #address_btn, #date_btn, #property_btn, #other_btn {
+	display: block;
+	margin-top: 0px;
+}
+#type_form, #rent_form, #address_form, #date_form, #property_form, #other_form {
+	margin-top:20px;
+}
+#type_form label, #rent_form label, #address_form label, #date_form label, #property_form label {
+	width:50%;
+}
+.type_buttons, .rent_buttons, .address_buttons, .date_buttons, .property_buttons, .other_buttons, .first_buttons {
+	text-align: center;
+}
+
+/*#other_form label {
+	width:50%;
+}*/
+
+/***********************************/
+.top_bar, #menu_title, #sign_up_title {
+	background-position: center top;
+	background-image:url("/icons/Photo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/***** SETTINGS PAGE ******/
+#sign_up_title {
+	font-size: 16pt;
+	padding-right: 170px;
+	text-align: right;
+}
+#setting_form {
+	margin-top: 10px;
+padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 0px;
+}
+
+#settinglabel {
+	margin-left:10px;
+	width:40%;
+}
+.textbox {
+	margin-right:10px;
+	width:40%;
+	float:right;
+}
+button#setting_save {
+	text-align: center;
+	width:100%;
+	font-weight:bold;
+	height:25pt;
+}
+
+/*********** SIGN UP PAGE **********/
+#sign {
+	margin-bottom:0px;
+}
+.signup_email {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-top: 85px; 	
+}
+
+/******* EXISTING PROFILES PAGE ********/
+h5 {
+	color:white;
+	display: block;
+	/*background-position: center top;
+	background-image:url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/t1/1782039_10202451000130515_675626893_n.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;*/
+	margin-top:0px;
+/*	margin-left:65px; */
+	margin-left: 0px;
+	margin-right:0px;
+	margin-bottom:0px; 
+	padding-top:30px;
+	padding-left: 0px;
+	padding-bottom:30px;
+	padding-right: 50px; */
+}
+#existprof {
+	font-size: 16pt;
+	padding-right: 80px;
+	text-align: right;
+}
+/*********** DETAILED INFO ****************/
+#detailinfo {
+	font-size: 16pt;
+	padding-right: 40px;
+	text-align: right;
+}
+#detailtitle {
+	text-align: center;
+}
+#maincontainer {
+	display: block;
+	text-align: center;
+}
+
+h3 {
+	color:white;
+	background-color: #1F5080;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+
+h6 {
+	color:white;
+	display: block;
+	/*background-position: center top;
+	background-image:url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/t1/1782039_10202451000130515_675626893_n.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;*/
+	margin-top:0px;
+/*	margin-left:65px; */
+	margin-left: 0px;
+	margin-right:0px;
+	margin-bottom:0px; 
+	padding-top:30px;
+	padding-left: 0px;
+	padding-bottom:30px;
+	padding-right: 50px; 
+}
+#abouttitle {
+	font-size: 16pt;
+	padding-right: 178px;
+	text-align: right;
+}
+
+#matchprof {
+	font-size: 16pt;
+	padding-right: 80px;
+	text-align: right;
+}
+
+.block {
+	width:33.33%;
+}
+
+#b1, #b2, #b3 {
+	float:left;
+}
+
+
+/******* SAVE, SUBMIT, UPDATE, EXPIRE BUTTONS *******/
+button#save, button#ss, button.detailed{
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:30pt;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+button#update, button#expire {
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:30pt;
+	margin-top:20px;
+	margin-bottom:0px;
+}
+
+input.menu {
+	margin-bottom:30px;
+	font-weight:bold;
+	height:40pt;
+	font-size:16pt;
+}
+
+
+.block .btn-block {
+	height:80pt;
+}
+.nav li {
+	width:33.33%;
+}
+.nav li a {
+	padding:5px 10px;
+}
+.nav {
+	clear:both;
+
+}
+
+
+.menu_bar {
+	float:left;
+	margin-left:15px;
+	margin-top:10px;
+}
+
+#main_buttons, #type_div, #rent_div, #property_div, #other_div, #date_div, #address_div{
+	display:none;
+}
+#existing_buttons {
+    display:none;
+}
+#detailtitle {
+	color:black;
+	margin:3%;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding:0%;
+	text-align:center;
+	width:80%%;
+	font-weight:bold;
+}
+#contact {
+	float:right;
+
+}
+.user_name{
+	font-weight:bold;
+}
+
+.user_table{
+	width:100%;
+	/*margin_bottom:15px;*/
+}
+
+.name_sp{
+	float:right;
+	font-weight: bold;
+}
+
+#type_div_e, #rent_div_e, #property_div_e, #other_div_e, #date_div_e, #address_div_e{
+	display:none;
+}
+
+[class^="icon-"],[class*=" icon-"]{display:inline-block;width:14px;height:14px;margin-top:1px;*margin-right:.3em;line-height:14px;vertical-align:text-top;background-image:url("/icons/glyphicons-sprite-sheets/glyphicons-halflings.png");background-position:14px 14px;background-repeat:no-repeat}.icon-white,.nav-pills>.active>a>[class^="icon-"],.nav-pills>.active>a>[class*=" icon-"],.nav-list>.active>a>[class^="icon-"],.nav-list>.active>a>[class*=" icon-"],.navbar-inverse .nav>.active>a>[class^="icon-"],.navbar-inverse .nav>.active>a>[class*=" icon-"],.dropdown-menu>li>a:hover>[class^="icon-"],.dropdown-menu>li>a:focus>[class^="icon-"],.dropdown-menu>li>a:hover>[class*=" icon-"],.dropdown-menu>li>a:focus>[class*=" icon-"],.dropdown-menu>.active>a>[class^="icon-"],.dropdown-menu>.active>a>[class*=" icon-"],.dropdown-submenu:hover>a>[class^="icon-"],.dropdown-submenu:focus>a>[class^="icon-"],.dropdown-submenu:hover>a>[class*=" icon-"],.dropdown-submenu:focus>a>[class*=" icon-"]{background-image:url("../YOUR IMAGE PATH/glyphicons-halflings-white.png")}.icon-glass{background-position:0 0}.icon-music{background-position:-24px 0}.icon-search{background-position:-48px 0}.icon-envelope{background-position:-72px 0}.icon-heart{background-position:-96px 0}.icon-star{background-position:-120px 0}.icon-star-empty{background-position:-144px 0}.icon-user{background-position:-168px 0}.icon-film{background-position:-192px 0}.icon-th-large{background-position:-216px 0}.icon-th{background-position:-240px 0}.icon-th-list{background-position:-264px 0}.icon-ok{background-position:-288px 0}.icon-remove{background-position:-312px 0}.icon-zoom-in{background-position:-336px 0}.icon-zoom-out{background-position:-360px 0}.icon-off{background-position:-384px 0}.icon-signal{background-position:-408px 0}.icon-cog{background-position:-432px 0}.icon-trash{background-position:-456px 0}.icon-home{background-position:0 -24px}.icon-file{background-position:-24px -24px}.icon-time{background-position:-48px -24px}.icon-road{background-position:-72px -24px}.icon-download-alt{background-position:-96px -24px}.icon-download{background-position:-120px -24px}.icon-upload{background-position:-144px -24px}.icon-inbox{background-position:-168px -24px}.icon-play-circle{background-position:-192px -24px}.icon-repeat{background-position:-216px -24px}.icon-refresh{background-position:-240px -24px}.icon-list-alt{background-position:-264px -24px}.icon-lock{background-position:-287px -24px}.icon-flag{background-position:-312px -24px}.icon-headphones{background-position:-336px -24px}.icon-volume-off{background-position:-360px -24px}.icon-volume-down{background-position:-384px -24px}.icon-volume-up{background-position:-408px -24px}.icon-qrcode{background-position:-432px -24px}.icon-barcode{background-position:-456px -24px}.icon-tag{background-position:0 -48px}.icon-tags{background-position:-25px -48px}.icon-book{background-position:-48px -48px}.icon-bookmark{background-position:-72px -48px}.icon-print{background-position:-96px -48px}.icon-camera{background-position:-120px -48px}.icon-font{background-position:-144px -48px}.icon-bold{background-position:-167px -48px}.icon-italic{background-position:-192px -48px}.icon-text-height{background-position:-216px -48px}.icon-text-width{background-position:-240px -48px}.icon-align-left{background-position:-264px -48px}.icon-align-center{background-position:-288px -48px}.icon-align-right{background-position:-312px -48px}.icon-align-justify{background-position:-336px -48px}.icon-list{background-position:-360px -48px}.icon-indent-left{background-position:-384px -48px}.icon-indent-right{background-position:-408px -48px}.icon-facetime-video{background-position:-432px -48px}.icon-picture{background-position:-456px -48px}.icon-pencil{background-position:0 -72px}.icon-map-marker{background-position:-24px -72px}.icon-adjust{background-position:-48px -72px}.icon-tint{background-position:-72px -72px}.icon-edit{background-position:-96px -72px}.icon-share{background-position:-120px -72px}.icon-check{background-position:-144px -72px}.icon-move{background-position:-168px -72px}.icon-step-backward{background-position:-192px -72px}.icon-fast-backward{background-position:-216px -72px}.icon-backward{background-position:-240px -72px}.icon-play{background-position:-264px -72px}.icon-pause{background-position:-288px -72px}.icon-stop{background-position:-312px -72px}.icon-forward{background-position:-336px -72px}.icon-fast-forward{background-position:-360px -72px}.icon-step-forward{background-position:-384px -72px}.icon-eject{background-position:-408px -72px}.icon-chevron-left{background-position:-432px -72px}.icon-chevron-right{background-position:-456px -72px}.icon-plus-sign{background-position:0 -96px}.icon-minus-sign{background-position:-24px -96px}.icon-remove-sign{background-position:-48px -96px}.icon-ok-sign{background-position:-72px -96px}.icon-question-sign{background-position:-96px -96px}.icon-info-sign{background-position:-120px -96px}.icon-screenshot{background-position:-144px -96px}.icon-remove-circle{background-position:-168px -96px}.icon-ok-circle{background-position:-192px -96px}.icon-ban-circle{background-position:-216px -96px}.icon-arrow-left{background-position:-240px -96px}.icon-arrow-right{background-position:-264px -96px}.icon-arrow-up{background-position:-289px -96px}.icon-arrow-down{background-position:-312px -96px}.icon-share-alt{background-position:-336px -96px}.icon-resize-full{background-position:-360px -96px}.icon-resize-small{background-position:-384px -96px}.icon-plus{background-position:-408px -96px}.icon-minus{background-position:-433px -96px}.icon-asterisk{background-position:-456px -96px}.icon-exclamation-sign{background-position:0 -120px}.icon-gift{background-position:-24px -120px}.icon-leaf{background-position:-48px -120px}.icon-fire{background-position:-72px -120px}.icon-eye-open{background-position:-96px -120px}.icon-eye-close{background-position:-120px -120px}.icon-warning-sign{background-position:-144px -120px}.icon-plane{background-position:-168px -120px}.icon-calendar{background-position:-192px -120px}.icon-random{width:16px;background-position:-216px -120px}.icon-comment{background-position:-240px -120px}.icon-magnet{background-position:-264px -120px}.icon-chevron-up{background-position:-288px -120px}.icon-chevron-down{background-position:-313px -119px}.icon-retweet{background-position:-336px -120px}.icon-shopping-cart{background-position:-360px -120px}.icon-folder-close{width:16px;background-position:-384px -120px}.icon-folder-open{width:16px;background-position:-408px -120px}.icon-resize-vertical{background-position:-432px -119px}.icon-resize-horizontal{background-position:-456px -118px}.icon-hdd{background-position:0 -144px}.icon-bullhorn{background-position:-24px -144px}.icon-bell{background-position:-48px -144px}.icon-certificate{background-position:-72px -144px}.icon-thumbs-up{background-position:-96px -144px}.icon-thumbs-down{background-position:-120px -144px}.icon-hand-right{background-position:-144px -144px}.icon-hand-left{background-position:-168px -144px}.icon-hand-up{background-position:-192px -144px}.icon-hand-down{background-position:-216px -144px}.icon-circle-arrow-right{background-position:-240px -144px}.icon-circle-arrow-left{background-position:-264px -144px}.icon-circle-arrow-up{background-position:-288px -144px}.icon-circle-arrow-down{background-position:-312px -144px}.icon-globe{background-position:-336px -144px}.icon-wrench{background-position:-360px -144px}.icon-tasks{background-position:-384px -144px}.icon-filter{background-position:-408px -144px}.icon-briefcase{background-position:-432px -144px}.icon-fullscreen{background-position:-456px -144px}
+
+.sub-form{
+	width:80px;
+}
+
+.form-label{
+	/*width:50%;*/
+
+}
+.form-table{
+	width:100%;
+}
+.cell{
+    vertical-align: top; 
+    margin:0px;
+}
+.label-cell{
+	width:35%;
+
+}
+.elem-cell{
+	width:65%;
+}
+.well{
+	/*background-color: #D9EDF7;*/
+	padding:10px;
+}
+#setting_form{
+	/*padding:2px;*/
+}
+.legends{
+	text-align: center;
+}
+
+.nav-tabs a{
+	font-weight: bold;
+}
+
+.red {
+	color:red;
+}
+.green {
+	color:green;
+}
+
+#hello_sp{
+	text-align: center;
+	font-size:15pt;
+}
+
+
+#slidepic{
+	margin-right: auto;
+	margin-left: auto;
+	padding: 5% 5% 5% 5%;
+	width: 10%;
+	height: 100%;
+}
+
+.slidesjs-previous{
+	padding: 5% 5% 5% 5%;
+}
+
+.slidesjs-next{
+	padding: 5% 5% 5% 5%;
+}
+
+#infolist{
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #1F5080;
+	text-align: center;
+}
+
+.slidesjs-pagination{
+	color: #1F5080;
+	font-size: 14px;
+}
+
+#story{
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: 16px;
+	background-color: #CCC;
+}
+
+.match_btn {
+
+	float:right;
+}

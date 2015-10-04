@@ -1,0 +1,273 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Create New Profile</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootswatch.min.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
+	<link rel="shortcut icon" href="/icon/favicon.ico">
+</head>
+
+<body>
+
+	<div class="top_bar">
+		<div class="menu_bar">
+			<div class="btn-group">
+		  		<button type="button" id="home_dropdown" class="btn btn-default btn-lg" data-toggle="dropdown">
+  				<span class="glyphicon glyphicon-home"></span>
+				</button>
+		  		<ul class="dropdown-menu" role="menu">
+		    		<li><a href="/menu">Home Menu</a></li>
+		    		<li><a href="/about">About</a></li>
+		  		</ul>
+			</div>
+		</div>
+		<h4 class="subtitle" id="createprof">Create Housing Profile</h4>
+		
+
+	</div>
+	
+<div class="container" id="newprof_bg">
+	
+	<ul class="nav nav-tabs ">
+  		<li class="active"><a href="/newProfile">New</a></li>
+  		<li><a href="/existing">Existing</a></li>
+  		<li><a href="/matches">Matches</a></li>
+	</ul>
+	<div id="main_buttons">
+		<div class="block" id="b1">
+			<button id="type_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Type</button>
+			<button id="date_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Date</button>
+		</div>
+		<div class="block" id="b1">
+			<button id="rent_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Rent</button>
+			<button id="property_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Property</button>
+		</div>
+		<div class="block" id="b1">
+			<button id="address_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Address</button>
+			<button id="other_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Other</button>
+		</div>
+		<div id="data">
+			  <button type="button" class="btn btn-primary" id="save" >Save</button>
+			  <button type="button" class="btn btn-primary" id="ss" >Submit</button>
+		</div>
+	</div>
+
+	<div id="type_div">
+		<form id="type_form" role="form" method="get" action="">
+			{{#each Types}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label id="type_label">{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label id="type_label">{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label id="type_label">{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <div class="type_buttons">
+	    		<input type="submit" id="type_back" value="Back" class="submit">
+				<input type="submit" id="type_save" value="Save" class="submit">
+				<input type="submit" id="type_submit" value="Submit" class="submit">
+			</div>
+		</form>
+	</div><!--
+    <div id="rent_div">
+		<form id="rent_form" role="form" method="get" action="">
+			{{#each Rent}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="rent_back" value="Back" class="submit">
+			<input type="submit" id="rent_save" value="Save" class="submit">
+			<input type="submit" id="rent_submit" value="Submit" class="submit">
+		</form>
+    </div>
+
+    <div id="address_div">
+		<form id="address_form" role="form" method="get" action="">
+			{{#each Address}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="address_back" value="Back" class="submit">
+			<input type="submit" id="address_save" value="Save" class="submit">
+			<input type="submit" id="address_submit" value="Submit" class="submit">
+		</form>
+    </div>
+
+    <div id="date_div">
+		<form id="date_form" role="form" method="get" action="">
+			{{#each Date}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="date_back" value="Back" class="submit">
+			<input type="submit" id="date_save" value="Save" class="submit">
+			<input type="submit" id="date_submit" value="Submit" class="submit">
+		</form>
+    </div>
+
+    <div id="property_div">
+		<form id="property_form" role="form" method="get" action="">
+			{{#each Property}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="property_back" value="Back" class="submit">
+			<input type="submit" id="property_save" value="Save" class="submit">
+			<input type="submit" id="property_submit" value="Submit" class="submit">
+		</form>
+
+    </div>
+
+    <div id="other_div">
+		<form id="other_form" role="form" method="get" action="">
+			{{#each Other}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+			{{/each}}
+	    	<input type="submit" id="other_back" value="Back" class="submit">
+			<input type="submit" id="other_save" value="Save" class="submit">
+			<input type="submit" id="other_submit" value="Submit" class="submit">
+		</form>
+
+    </div>-->
+
+
+</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/handlebars.js"></script>
+	<script src="js/ucsdrentals.js"></script>
+	<script src="js/newProfile2.js"></script>
+	<script src="js/submit_form.js"></script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-48706855-1', 'ucsdrentals.herokuapp.com');
+	  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
